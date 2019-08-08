@@ -13,3 +13,15 @@ handleClick() {
   }));
 }
 ```
+
+should be re-written as:
+
+```JSX
+handleClick() {
+  this.setState((prevState, props) => {
+    return ({
+      toggledOn: !prevState.toggledOn
+    });
+  }
+}
+```
