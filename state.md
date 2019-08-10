@@ -8,9 +8,9 @@ You should pass in a callback instead of object when you are manipulating one st
 Setting state based on state directly can cause unintended results due to React's batch updating.
 ```JSX
 handleClick() {
-  this.setState(state => ({
-    toggledOn: !state.toggledOn
-  }));
+  this.setState({
+    toggledOn: !this.state.toggledOn
+  });
 }
 ```
 
